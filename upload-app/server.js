@@ -34,6 +34,12 @@ const upload = multer({ storage });
 
 // Routes
 
+// Health Check: http://localhost:3000/health
+app.get('/health', (req, res) => {
+    res.json({ message: 'Server is running' });
+});
+
+
 // POST /upload
 app.post('/upload', upload.single('file'), (req, res) => {
     if (!req.file) {

@@ -12,6 +12,12 @@ A lightweight Node.js/Express backend for handling file uploads, storage, and re
 
 ## Running the Server
 
+### Development (Auto-restart)
+```bash
+npm run dev
+```
+
+### Production
 Start the server using Node.js:
 
 ```bash
