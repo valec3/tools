@@ -13,12 +13,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors(
-    {
-        origin: "*",
-        credentials: true   
-    }
-));
+app.use(cors({
+  origin: [
+    'https://quierolapromocion.com',
+    'https://api.quierolapromocion.com',
+    'http://luxurystarspa.com',
+    'http://localhost:3000'
+  ]
+}));
 app.use(express.json());
 
 // Ensure uploads directory exists
